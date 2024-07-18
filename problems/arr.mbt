@@ -22,33 +22,7 @@ fn nth[T](arr : Array[T], n : Int) -> T? {
   }
 }
 
-fn reverse[T](arr : Array[T]) -> Array[T] {
-  let reversed = Array::new(capacity = arr.length())
-  for i = arr.length() - 1; i >= 0; i = i - 1 {
-    reversed.push(arr[i])
-  } else {
-    return reversed
-  }
-}
 
-test "reverse an array" {
-  inspect(
-    reverse([]),
-    content = "[]"
-  )!
-  inspect(
-    reverse(['Z', 'Y']),
-    content = "[Y, Z]"
-  )!
-  inspect(
-    reverse([3, 4, 5]),
-    content = "[5, 4, 3]"
-  )!
-  inspect(
-    reverse(["a", "b", "c"]),
-    content = "[c, b, a]"
-  )!
-}
 
 
 fn is_palindrome[T : Eq](arr : Array[T]) -> Bool {
@@ -155,3 +129,6 @@ test "rotate an array" {
 }
 
 
+fn next_permutation[T : Eq](arr : Array[T]) -> Array[T] {
+  todo("next_permutation")
+}
